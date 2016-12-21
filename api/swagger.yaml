@@ -1,0 +1,31 @@
+---
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: "<Cisco UCS Manager Service>"
+paths:
+  /login:
+    get:
+      description: "Gets a session cookie by logging into \nthe UCS Manager\n"
+      operationId: "loginGET"
+      parameters:
+      - name: "host"
+        in: "query"
+        description: "USC manger host name or IP"
+        required: false
+        type: "string"
+      - name: "user"
+        in: "query"
+        description: "UCS manger user name"
+        required: false
+        type: "string"
+      - name: "password"
+        in: "query"
+        description: "UCS manger user password"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Successful login"
+      x-swagger-router-controller: "Default"
+definitions: {}
